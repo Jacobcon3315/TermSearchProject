@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
-    private int listNum = 0;
+    private String listTerm = "";
     private final String URL
             = "https://feeds.simplecast.com/54nAGcIl";
     private ListView listView;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                listNum = Integer.parseInt(search.getText().toString());
+                listTerm = search.getText().toString();
                 displayList(listItems);
 
             }
@@ -51,16 +51,13 @@ public class MainActivity extends AppCompatActivity
 
     public void displayList(ArrayList<Item> items)
     {
-        int count = 0;
         if (items != null)
         {
             // Build ArrayList of titles to display
             ArrayList<String> titles = new ArrayList<String>();
             for (Item item : items) {
-                if (count >= listNum)
-                    break;
-                titles.add(item.getTitle());
-                count++;
+                if (item.getTitle().contains(listTerm))
+                    titles.add(item.getTitle());
             }
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
