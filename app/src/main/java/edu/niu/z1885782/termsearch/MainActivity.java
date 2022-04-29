@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity
 {
     private String listTerm = "";
     private final String URL
-            = "https://feeds.simplecast.com/54nAGcIl";
+            = "https://www.autosport.com/rss/f1/news/";
     private ListView listView;
     private ArrayList<Item> listItems;
 
