@@ -12,7 +12,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@id/list_view"
-        android:hint="How Many?"
+        android:hint="What Term to Search?"
         tools:ignore="MissingConstraints"></EditText>
 
     <ListView

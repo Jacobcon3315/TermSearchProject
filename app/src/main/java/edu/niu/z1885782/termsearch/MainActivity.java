@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
             // Build ArrayList of titles to display
             ArrayList<String> titles = new ArrayList<String>();
             for (Item item : items) {
-                if (item.getTitle().contains(listTerm))
+                if (item.getTitle().toLowerCase().contains(listTerm.toLowerCase()))
                     titles.add(item.getTitle());
             }
 
